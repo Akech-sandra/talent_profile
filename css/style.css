@@ -831,7 +831,73 @@ a:hover {
 .testimonial-box {
   color: #fff;
   text-align: center;
+  display: flex;
+  /* gap: 10px; */
 }
+
+.author-test .rounded-circle {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Ensure the height matches the width */
+  object-fit: cover; /* Keeps the image aspect ratio while fitting into the circle */
+}
+
+.work-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-img {
+  position: relative;
+}
+
+.work-img img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.work-box:hover .work-img img {
+  transform: scale(1.1);
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.work-box:hover .work-overlay {
+  opacity: 1;
+}
+
+.w-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.w-more {
+  font-size: 1em;
+}
+
+.w-title{
+  color: white;
+}
+
+h2 .w-title{
+  color: black;
+}
+
 
 .testimonial-box .author-test {
   margin-top: 1rem;
